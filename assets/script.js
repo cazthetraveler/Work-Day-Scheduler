@@ -10,8 +10,11 @@ $(function () {
   // useful when saving the description in local storage?
 
   $(".saveBtn").click(function() {
-    var timeBlock = $(this).parent();
+    var timeBlock = $(this).parent().attr("id").split("hour-")[1]; //splits into 2 arrays, the number is in the second value
     console.log(timeBlock);
+    var input = $(this).siblings(".description").val(); //gets the value of the user input
+    console.log(input);
+    localStorage.setItem(timeBlock, input); //"name" is the time block value, the value is the input
   });
 
   // TODO: Add code to apply the past, present, or future class to each time
@@ -19,11 +22,19 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  //
+
+  //get handle on hour
+  //get handle on time block elements
+  //set function for changing the elements class
+  //get handle on the hour-# again
+  //set if statement for each hour and determine what class itll have
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
-  //
+
+  //get localstorage for each hour-#
+
   // TODO: Add code to display the current date in the header of the page.
   var today = dayjs();
   var currentDay = $("#currentDay");
