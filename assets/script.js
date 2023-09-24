@@ -60,6 +60,12 @@ $(function () {
   $("#hour-9 .description").text(localStorage.getItem("9"));
   $("#hour-10 .description").text(localStorage.getItem("10"));
   $("#hour-11 .description").text(localStorage.getItem("11"));
+  $("#hour-12 .description").text(localStorage.getItem("12"));
+  $("#hour-13 .description").text(localStorage.getItem("13"));
+  $("#hour-14 .description").text(localStorage.getItem("14"));
+  $("#hour-15 .description").text(localStorage.getItem("15"));
+  $("#hour-16 .description").text(localStorage.getItem("16"));
+  $("#hour-17 .description").text(localStorage.getItem("17"));
 
   // TODO: Add code to display the current date in the header of the page.
   var today = dayjs();
