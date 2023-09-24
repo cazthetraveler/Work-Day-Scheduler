@@ -35,7 +35,7 @@ $(function () {
   $.each(timeBlockEl, function() {
     var timeBlockHour = $(this).attr("id").split("hour-")[1];
 
-    if (timeBlockEl == currentHour) {
+    if (timeBlockHour == currentHour) {
       $(this).addClass("present");
       $(this).removeClass("past");
       $(this).removeClass("future");
