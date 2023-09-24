@@ -34,6 +34,11 @@ $(function () {
   // attribute of each time-block be used to do this?
 
   //get localstorage for each hour-#
+  //okayyy i think im finally getting the hang of the localstorage
+
+  $("#hour-9 .description").text(localStorage.getItem("9"));
+  $("#hour-10 .description").text(localStorage.getItem("10"));
+  $("#hour-11 .description").text(localStorage.getItem("11"));
 
   // TODO: Add code to display the current date in the header of the page.
   var today = dayjs();
