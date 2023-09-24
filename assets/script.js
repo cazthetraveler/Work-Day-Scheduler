@@ -29,6 +29,27 @@ $(function () {
   //get handle on the hour-# again
   //set if statement for each hour and determine what class itll have
 
+  var currentHour = dayjs().hour();
+  var timeBlockEl = $(".time-block");
+
+  $.each(timeBlockEl, function() {
+    var timeBlockHour = $(this).attr("id").split("hour-")[1];
+
+    if (timeBlockEl == currentHour) {
+      $(this).addClass("present");
+      $(this).removeClass("past");
+      $(this).removeClass("future");
+    } else if (timeBlockHour < currentHour) {
+      $(this).addClass("past");
+      $(this).removeClass("present");
+      $(this).removeClass("future");
+    } else if (timeBlockHour > currentHour) {
+      $(this).addClass("future");
+      $(this).removeClass("past");
+      $(this).removeClass("present");
+    }
+  });
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
